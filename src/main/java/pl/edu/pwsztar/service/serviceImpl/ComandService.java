@@ -8,6 +8,7 @@ import java.util.List;
 public interface ComandService {
 
     List<ComandDto> findAll();
+    ComandDto findById(Long id);
     void addComand(CreateComandDto createComandDto);
     void deleteComand(Long id);
     void updateComand(CreateComandDto ComandDto, Long id)  throws NullPointerException;

@@ -7,7 +7,7 @@ import pl.edu.pwsztar.domain.entity.Comand;
 //niedokonczone
 @Component
 public class AddComandMapper {
-    public Comand CreateComandDtoToComandDto(CreateComandDto createComandDto) {
+    public Comand createComandDtoToComandDto(CreateComandDto createComandDto) {
 
         Comand comand = new Comand();
         comand.setEnginePower(createComandDto.getEnginePower());

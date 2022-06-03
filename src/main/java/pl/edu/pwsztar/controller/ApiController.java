@@ -19,7 +19,6 @@ import pl.edu.pwsztar.service.serviceImpl.UserService;
 import java.util.List;
 
 @RestController
-@RequestMapping(value="/api")
 public class ApiController {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(ApiController.class);

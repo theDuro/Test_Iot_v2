@@ -3,6 +3,7 @@ package pl.edu.pwsztar.domain.dto;
 import java.io.Serializable;
 
 public class CreateComandDto implements Serializable {
+    private Long comandId;
     private Float ledLimitedValue;
     private Float ledFrequency ;
     private Float enginePower;
@@ -40,5 +41,29 @@ public class CreateComandDto implements Serializable {
 
     public Long getUserId() {
         return userId;
+    }
+
+    public void setLedLimitedValue(Float ledLimitedValue) {
+        this.ledLimitedValue = ledLimitedValue;
+    }
+
+    public void setLedFrequency(Float ledFrequency) {
+        this.ledFrequency = ledFrequency;
+    }
+
+    public void setEnginePower(Float enginePower) {
+        this.enginePower = enginePower;
+    }
+
+    public void setUserId(Long userId) {
+        this.userId = userId;
+    }
+
+    public Long getComandId() {
+        return comandId;
+    }
+
+    public void setComandId(Long comandId) {
+        this.comandId = comandId;
     }
 }

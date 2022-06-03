@@ -42,8 +42,21 @@ public class ComandServiceImpl implements ComandService {
     }
 
     @Override
+    public ComandDto findById(Long id) {
+        Comand comand = comandRepository.findById(id).orElse(null);
+
+        ComandDto comandDto = new ComandDto();
+        comandDto.setComandId(comand.getComandId());
+        comandDto.setEnginePower(comand.getEnginePower());
+        comandDto.setLedFrequency(comand.getLedFrequency());
+        comandDto.setLedLimitedValue(comand.getLedLimitedValue());
+        comandDto.setUserId(comand.getUserId());
+        return comandDto;
+    }
+
+    @Override
     public void addComand(CreateComandDto createComandDto) {
-        comandRepository.save(addComandMapper.CreateComandDtoToComandDto(createComandDto));
+        comandRepository.save(addComandMapper.createComandDtoToComandDto(createComandDto));
     }
 
     @Override
@@ -59,7 +72,7 @@ public class ComandServiceImpl implements ComandService {
         if (id == null)
 
             throw new NullPointerException();
-         Comand comand = addComandMapper.CreateComandDtoToComandDto(createComandDto);
+         Comand comand = addComandMapper.createComandDtoToComandDto(createComandDto);
          comand.setComandId(id);
          comandRepository.save(comand);
 /*

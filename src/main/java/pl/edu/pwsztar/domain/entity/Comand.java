@@ -28,6 +28,13 @@ public class Comand implements Serializable {
     public Comand() {
     }
 
+    public Comand(Float ledLimitedValue, Float ledFrequency, Float enginePower, Long userId) {
+        this.ledLimitedValue = ledLimitedValue;
+        this.ledFrequency = ledFrequency;
+        this.enginePower = enginePower;
+        this.userId = userId;
+    }
+
     public Long getComandId() {
         return comandId;
     }
